@@ -120,6 +120,7 @@ html, body {
     color: #60a5fa; /* fallback */
     background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #8B5CF6 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     
     /* Elegant jumping animation */
@@ -294,25 +295,45 @@ html, body {
     text-align: center;
 }
 
-.repasit-heading {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    margin-bottom: -15px;
+/* Logo from REPASit exact match */
+.logo-group-repasit {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 24px;
+    justify-content: center;
 }
 
-.repasit-logo {
-    font-size: 4rem;
+.logo-repasit {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem; 
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    color: #fff;
 }
 
-.repasit-accent {
-    background: linear-gradient(135deg, #10b981, #3b82f6) !important;
-    -webkit-background-clip: text !important;
-    filter: drop-shadow(0 10px 15px rgba(16, 185, 129, 0.3)) !important;
-    animation: none !important;
-    padding-left: 5px;
+.logo-repasit .accent-repasit {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    color: #ffffff;
+    padding: 2px 14px;
+    border-radius: 12px;
+    font-size: 3.2rem;
+    margin-left: 8px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.sub-logo-repasit {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #3b82f6;
+    text-transform: lowercase;
+    opacity: 0.8;
+    transform: translateY(8px);
+    margin-left: 8px;
 }
 
 .repasit-desc {
