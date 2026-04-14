@@ -18,44 +18,61 @@
     <div class="glow-orb top"></div>
     <div class="glow-orb bottom"></div>
     
-    <div class="hero-wrapper">
-        <main class="container">
-        
-        <div class="logo-container">
-            <h1 class="logo-text">
-                <span class="animated-q">Q</span><span class="logo-remainder">BITI</span>
-            </h1>
+    <div class="scroll-container" id="scrollContainer">
+        <div class="hero-wrapper">
+            <main class="container">
+                <div class="logo-container">
+                    <h1 class="logo-text">
+                        <span class="animated-q">Q</span><span class="logo-remainder">BITI</span>
+                    </h1>
+                </div>
+                <div class="contact">
+                    <a href="mailto:qbiti@qbiti.cz" class="btn">qbiti@qbiti.cz</a>
+                </div>
+            </main>
+            
+            <button id="goDown" class="scroll-arrow" aria-label="Zoobraziť viac">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
         </div>
-        
-        <div class="contact">
-            <a href="mailto:qbiti@qbiti.cz" class="btn">qbiti@qbiti.cz</a>
-        </main>
-        
-        <a href="#repasit" class="scroll-arrow" aria-label="Zoobraziť viac">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </a>
+
+        <!-- Repasit Portal Section -->
+        <section id="repasit" class="repasit-section">
+            <button id="goUp" class="scroll-arrow up-arrow" aria-label="Naspäť hore">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </button>
+            <div class="container secondary-container">
+                <h2 class="repasit-heading">Náš E-shop</h2>
+                <div class="logo-container">
+                    <div class="logo-text repasit-logo">
+                        REPAS<span class="animated-q repasit-accent">it</span>
+                    </div>
+                </div>
+                <p class="repasit-desc">Prémiová repasovaná technika pre firmy aj domácnosti.</p>
+                <a href="https://repasit.qbiti.cz" class="btn btn-primary" target="_blank" rel="noopener">Navštíviť E-shop</a>
+            </div>
+        </section>
     </div>
 
-    <!-- Repasit Portal Section -->
-    <section id="repasit" class="repasit-section">
-        <div class="container secondary-container">
-            <h2 class="repasit-heading">Náš E-shop</h2>
-            <div class="logo-container">
-                <div class="logo-text repasit-logo">
-                    REPAS<span class="animated-q repasit-accent">it</span>
-                </div>
-            </div>
-            <p class="repasit-desc">Prémiová repasovaná technika pre firmy aj domácnosti.</p>
-            <a href="https://repasit.qbiti.cz" class="btn btn-primary" target="_blank" rel="noopener">Navštíviť E-shop</a>
-        </div>
-    </section>
-
     <script>
-        // Jemná fade-in animácia celej karty po načítaní
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
-                document.querySelector('.container').classList.add('visible');
+                document.querySelectorAll('.container').forEach(c => c.classList.add('visible'));
             }, 150);
+            
+            const btnDown = document.getElementById('goDown');
+            const btnUp = document.getElementById('goUp');
+            const scrollContainer = document.getElementById('scrollContainer');
+            
+            btnDown.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollContainer.style.transform = 'translateY(-100vh)';
+            });
+            
+            btnUp.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollContainer.style.transform = 'translateY(0)';
+            });
         });
     </script>
 </body>
