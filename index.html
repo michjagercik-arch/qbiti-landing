@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QBITI | Prichádzame čoskoro</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="mesh-bg"></div>
+    <div class="glow-orb top"></div>
+    <div class="glow-orb bottom"></div>
+    
+    <!-- Main Content -->
+    <main class="container">
+        
+        <div class="logo-container">
+            <h1 class="logo-text">
+                <span class="animated-q">Q</span><span class="logo-remainder">BITI</span>
+            </h1>
+        </div>
+        
+        <p class="subtitle">Niečo veľké sa chystá.</p>
+        
+        <div class="contact">
+            <a href="mailto:repasit@qbiti.cz" class="btn">Kontaktujte nás</a>
+        </div>
+        
+    </main>
+
+    <script>
+        // Jemná fade-in animácia celej karty po načítaní
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.querySelector('.container').classList.add('visible');
+            }, 150);
+        });
+    </script>
+</body>
+</html>
