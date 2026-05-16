@@ -357,3 +357,42 @@ html, body {
     background: #2563EB;
     color: #fff;
 }
+
+/* Responzívny dizajn pre sekciu Repasit */
+@media (max-width: 768px) {
+    .secondary-container {
+        padding: 50px 30px;
+    }
+    .logo-repasit {
+        font-size: 3rem;
+    }
+    .logo-repasit .accent-repasit {
+        font-size: 2.5rem;
+        padding: 2px 10px;
+    }
+    .sub-logo-repasit {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .secondary-container {
+        padding: 40px 20px;
+    }
+    .logo-group-repasit {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    .logo-repasit {
+        font-size: 2.2rem;
+    }
+    .logo-repasit .accent-repasit {
+        font-size: 1.8rem;
+        padding: 2px 8px;
+    }
+    .sub-logo-repasit {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+}
